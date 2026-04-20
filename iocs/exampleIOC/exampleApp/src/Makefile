@@ -16,10 +16,21 @@ DBD += example.dbd
 example_DBD += base.dbd
 
 # Include dbd files from all support applications:
-#example_DBD += xxx.dbd
+example_DBD += asyn.dbd 
+example_DBD += drvAsynIPPort.dbd
+example_DBD += motorSupport.dbd
+example_DBD += exampleSupport.dbd
 
 # Add all the support libraries needed by this IOC
-#example_LIBS += xxx
+example_LIBS += example
+example_LIBS += motor
+example_LIBS += asyn
+
+# The std module provides the doAfterIocInit iocsh command
+ifdef STD
+  example_DBD += stdSupport.dbd
+  example_LIBS := std $(example_LIBS)
+endif
 
 # example_registerRecordDeviceDriver.cpp derives from example.dbd
 example_SRCS += example_registerRecordDeviceDriver.cpp

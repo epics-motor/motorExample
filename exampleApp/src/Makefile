@@ -12,12 +12,15 @@ LIBRARY_IOC += example
 
 # xxxRecord.h will be created from xxxRecord.dbd
 #DBDINC += xxxRecord
-# install example.dbd into <top>/dbd
-DBD += example.dbd
+# install exampleSupport.dbd into <top>/dbd
+DBD += exampleSupport.dbd
+
+exampleSupport_DBD += example.dbd
 
 # specify all source files to be compiled and added to the library
-#example_SRCS += xxx
+example_SRCS += exampleDriver.cpp
 
+example_LIBS += motor asyn
 example_LIBS += $(EPICS_BASE_IOC_LIBS)
 
 #===========================

@@ -1,21 +1,22 @@
-#!../../bin/rhel9-x86_64/example
-
-#- You may have to change example to something else
-#- everywhere it appears in this file
+#!../../bin/linux-x86_64/example
 
 < envPaths
 
-cd "${TOP}"
+cd "${TOP}/iocBoot/${IOC}"
 
 ## Register all support components
-dbLoadDatabase "dbd/example.dbd"
+dbLoadDatabase "$(TOP)/dbd/example.dbd"
 example_registerRecordDeviceDriver pdbbase
 
-## Load record instances
-#dbLoadRecords("db/example.db","user=kpetersn")
+# Define the IOC prefix
+< settings.iocsh
 
-cd "${TOP}/iocBoot/${IOC}"
+# Allstop, alldone
+iocshLoad("$(MOTOR)/iocsh/allstop.iocsh", "P=$(PREFIX)")
+
+## Example Motor Controller
+< example.iocsh
+
 iocInit
 
-## Start any sequence programs
-#seq sncxxx,"user=kpetersn"
+# Boot complete

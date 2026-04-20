@@ -1,0 +1,6 @@
+# Use the following lines if motorExample was built inside motor
+MOTOR=
+-include $(MOTOR)/configure/RELEASE
+# Use the following lines if motorExample was built outside motor
+#!MOTOR_EXAMPLE=
+#!-include $(MOTOR_EXAMPLE)/configure/RELEASE.local

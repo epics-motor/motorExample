@@ -1,0 +1,2 @@
+# Load motorExample support will all the default macros
+iocshLoad("$(MOTOR_EXAMPLE)/iocsh/motorExample.iocsh", "INSTANCE=EXAMPLE")
