@@ -19,10 +19,10 @@ example_DBD += base.dbd
 example_DBD += asyn.dbd 
 example_DBD += drvAsynIPPort.dbd
 example_DBD += motorSupport.dbd
-example_DBD += exampleSupport.dbd
+example_DBD += ExampleSupport.dbd
 
 # Add all the support libraries needed by this IOC
-example_LIBS += example
+example_LIBS += Example
 example_LIBS += motor
 example_LIBS += asyn
 
