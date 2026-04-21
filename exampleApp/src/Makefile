@@ -12,7 +12,7 @@ LIBRARY_IOC += Example
 
 # xxxRecord.h will be created from xxxRecord.dbd
 #DBDINC += xxxRecord
-# install exampleSupport.dbd into <top>/dbd
+# install ExampleSupport.dbd into <top>/dbd
 DBD += ExampleSupport.dbd
 
 ExampleSupport_DBD += Example.dbd
