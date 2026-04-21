@@ -7,4 +7,4 @@ of motor.  Includes an example motor driver based on the support in [motorVMC](h
 ## Usage
 
 The [createMotorDriverModule](https://github.com/epics-motor/createMotorDriverModule) python script can be used to create a new EPICS 
-motor driver module, based on motorExmaple.
+motor driver module, based on motorExample.
