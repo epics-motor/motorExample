@@ -8,20 +8,20 @@ include $(TOP)/configure/CONFIG
 #==================================================
 # build a support library
 
-LIBRARY_IOC += example
+LIBRARY_IOC += Example
 
 # xxxRecord.h will be created from xxxRecord.dbd
 #DBDINC += xxxRecord
 # install exampleSupport.dbd into <top>/dbd
-DBD += exampleSupport.dbd
+DBD += ExampleSupport.dbd
 
-exampleSupport_DBD += example.dbd
+ExampleSupport_DBD += Example.dbd
 
 # specify all source files to be compiled and added to the library
-example_SRCS += exampleDriver.cpp
+Example_SRCS += ExampleDriver.cpp
 
-example_LIBS += motor asyn
-example_LIBS += $(EPICS_BASE_IOC_LIBS)
+Example_LIBS += motor asyn
+Example_LIBS += $(EPICS_BASE_IOC_LIBS)
 
 #===========================
 
