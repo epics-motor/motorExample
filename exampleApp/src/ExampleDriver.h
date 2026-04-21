@@ -1,5 +1,5 @@
 /*
-FILENAME...   exampleDriver.h
+FILENAME...   ExampleDriver.h
 USAGE...      Example motor driver support
 */
 

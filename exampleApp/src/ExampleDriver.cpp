@@ -1,5 +1,5 @@
 /*
-FILENAME...   exampleDriver.cpp
+FILENAME...   ExampleDriver.cpp
 USAGE...      Example motor driver support
 */
 
@@ -17,7 +17,7 @@ USAGE...      Example motor driver support
 #include "asynMotorAxis.h"
 
 #include <epicsExport.h>
-#include "exampleDriver.h"
+#include "ExampleDriver.h"
 
 #define NINT(f) (int)((f)>0 ? (f)+0.5 : (f)-0.5)
 
